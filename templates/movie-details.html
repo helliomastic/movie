@@ -7,36 +7,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Free Guy 2021</title>
 
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./static/favicon.svg" type="image/svg+xml" />
 
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 
-
-  <link rel="stylesheet" href="./assets/css/style.css">
-
- 
+  <!-- 
+    - google font link
+  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700 display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body id="#top">
 
- 
+  <!-- 
+    - #HEADER
+  -->
 
   <header class="header" data-header>
     <div class="container">
 
       <div class="overlay" data-overlay></div>
 
-      <a href="./index.html" class="logo">
-        <img src="./readme-images/project-logo.png" alt="PG Movie logo">
+      <a href="/" class="logo">
+        <img src="./static/readme-images/project-logo.png" alt="PG_Movie">
       </a>
 
       <div class="header-actions">
 
-        <button class="search-btn">
-          <ion-icon name="search-outline"></ion-icon>
-        </button>
+      
 
         <div class="lang-wrapper">
           <label for="language">
@@ -46,12 +52,9 @@
           <select name="language" id="language">
             <option value="en">English</option>
             <option value="au">Hindi</option>
-            <option value="ar">Chinese</option>
-            <option value="tu">Spanish</option>
+            
           </select>
         </div>
-
-        <button class="btn btn-primary">Sign in</button>
 
       </div>
 
@@ -63,8 +66,8 @@
 
         <div class="navbar-top">
 
-          <a href="./index.html" class="logo">
-            <img src="./readme-images/project-logo.png" alt="PG Movie logo">
+          <a href="/" class="logo">
+            <img src="./static/readme-images/project-logo.png" alt="PG_Movie">
           </a>
 
           <button class="menu-close-btn" data-menu-close-btn>
@@ -75,25 +78,17 @@
 
         <ul class="navbar-list">
 
-          <li>
-            <a href="#home" class="navbar-link">Home</a>
-          </li>
+          
 
           <li>
-            <a href="#update" class="navbar-link">Update</a>
+            <a href="#movie" class="navbar-link" style = "color: hsl(56.9, 100%, 50%);"> Get More Recommended Movies ➜</a>
           </li>
 
-          <li>
-            <a href="#movie" class="navbar-link">Movie</a>
-          </li>
+          
 
           <li>
-            <a href="#web-series" class="navbar-link">Web Series</a>
-          </li>
-
-          <li>
-            <a href="#Pricing" class="navbar-link">Pricing</a>
-          </li>
+            <a href="/recommd" class="navbar-link btn" data-nav-link style="border: 2px solid hsl(56.9, 100%, 50%); border-radius: 15px; padding: 7px 15px; display: inline-block; text-decoration: none;">Find Movies</a>
+        </li>
 
         </ul>
 
@@ -108,12 +103,6 @@
           <li>
             <a href="#" class="navbar-social-link">
               <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="navbar-social-link">
-              <ion-icon name="logo-pinterest"></ion-icon>
             </a>
           </li>
 
@@ -146,26 +135,23 @@
       <!-- 
         - #MOVIE DETAIL
       -->
-      <section id="home" class="navbar-link">
+
       <section class="movie-detail">
         <div class="container">
 
           <figure class="movie-detail-banner">
 
-            <img src="./assets/images/movie-4.png" alt="Free guy movie poster">
+            <img src="./static/images/upcoming-1.png" alt="The Northman .......">
 
-            <button class="play-btn">
-              <ion-icon name="play-circle-outline"></ion-icon>
-            </button>
 
           </figure>
 
           <div class="movie-detail-content">
 
-            <p class="detail-subtitle">New Episodes</p>
+            <p class="detail-subtitle">Action-Filled Epic</p>
 
             <h1 class="h1 detail-title">
-              Free <strong>Guy</strong>
+              The <strong>Northman .......</strong>
             </h1>
 
             <div class="meta-wrapper">
@@ -177,6 +163,7 @@
               </div>
 
               <div class="ganre-wrapper">
+
                 <a href="#">Comedy,</a>
 
                 <a href="#">Action,</a>
@@ -191,13 +178,14 @@
                 <div>
                   <ion-icon name="calendar-outline"></ion-icon>
 
-                  <time datetime="2021">2021</time>
+                  <time datetime="April 22, 2022">April 22, 2022</time>
                 </div>
 
                 <div>
                   <ion-icon name="time-outline"></ion-icon>
 
-                  <time datetime="PT115M">115 min</time>
+                  <time datetime="PT115M">115 min</time><br>
+                  <p>Director: Robert Eggers</p><br>
                 </div>
 
               </div>
@@ -205,9 +193,7 @@
             </div>
 
             <p class="storyline">
-              A bank teller called Guy realizes he is a background character in an open world video game called Free
-              City that will
-              soon go offline.
+              It focuses on Amleth, a Viking prince who sets out on a quest to avenge the murder of his father. The film is heavily influenced by Norse mythology.
             </p>
 
             <div class="details-actions">
@@ -226,13 +212,13 @@
 
               <button class="btn btn-primary">
                 <ion-icon name="play"></ion-icon>
+                Watch Now
 
-                <span>Watch Now</span>
               </button>
 
             </div>
 
-            <a href="./assets/images/movie-4.png" download class="download-btn">
+            <a href="./static/images/movie-4.png" download class="download-btn">
               <span>Download</span>
 
               <ion-icon name="download-outline"></ion-icon>
@@ -248,10 +234,10 @@
 
 
       <!-- 
-        - #update
+        - #TV SERIES
       -->
-      <section id="update" class="navbar-link">
-      <section class="update">
+
+      <section class="tv-series">
         <div class="container">
 
           <p class="section-subtitle">Best TV Series</p>
@@ -263,27 +249,27 @@
             <li>
               <div class="movie-card">
 
-                <a href="./movie-details.html">
+                <a href="/details">
                   <figure class="card-banner">
-                    <img src="./assets/images/series-1.png" alt="Moon Knight movie poster">
+                    <img src="./static/images/series-1.png" alt="Moon Knight movie poster">
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="/details">
                     <h3 class="card-title">Moon Knight</h3>
                   </a>
 
-                  <time datetime="2022">2022</time>
+                  <time datetime="2022">1920</time>
                 </div>
 
                 <div class="card-meta">
-                  <div class="badge badge-outline">2K</div>
+                  <div class="badge badge-outline">4K</div>
 
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT47M">47 min</time>
+                    <time datetime="PT47M">1hr 47 min</time>
                   </div>
 
                   <div class="rating">
@@ -299,33 +285,33 @@
             <li>
               <div class="movie-card">
 
-                <a href="./movie-details.html">
+                <a href="/details">
                   <figure class="card-banner">
-                    <img src="./assets/images/series-2.png" alt="Halo movie poster">
+                    <img src="./static/images/series-2.png" alt="Halo movie poster">
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="/details">
                     <h3 class="card-title">Halo</h3>
                   </a>
 
-                  <time datetime="2022">2022</time>
+                  <time datetime="2022">2014</time>
                 </div>
 
                 <div class="card-meta">
-                  <div class="badge badge-outline">2K</div>
+                  <div class="badge badge-outline">4K</div>
 
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT59M">59 min</time>
+                    <time datetime="PT59M"> 2hr 59 min</time>
                   </div>
 
                   <div class="rating">
                     <ion-icon name="star"></ion-icon>
 
-                    <data>8.8</data>
+                    <data>8.9</data>
                   </div>
                 </div>
 
@@ -335,14 +321,14 @@
             <li>
               <div class="movie-card">
 
-                <a href="./movie-details.html">
+                <a href="/details">
                   <figure class="card-banner">
-                    <img src="./assets/images/series-3.png" alt="Vikings: Valhalla movie poster">
+                    <img src="./static/images/series-3.png" alt="Vikings: Valhalla movie poster">
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="/details">
                     <h3 class="card-title">Vikings: Valhalla</h3>
                   </a>
 
@@ -355,13 +341,13 @@
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT51M">51 min</time>
+                    <time datetime="PT51M">1hr 51 min</time>
                   </div>
 
                   <div class="rating">
                     <ion-icon name="star"></ion-icon>
 
-                    <data>8.3</data>
+                    <data>6.3</data>
                   </div>
                 </div>
 
@@ -371,14 +357,14 @@
             <li>
               <div class="movie-card">
 
-                <a href="./movie-details.html">
+                <a href="/details">
                   <figure class="card-banner">
-                    <img src="./assets/images/series-4.png" alt="Money Heist movie poster">
+                    <img src="./static/images/series-4.png" alt="Money Heist movie poster">
                   </figure>
                 </a>
 
                 <div class="title-wrapper">
-                  <a href="./movie-details.html">
+                  <a href="/details">
                     <h3 class="card-title">Money Heist</h3>
                   </a>
 
@@ -391,13 +377,13 @@
                   <div class="duration">
                     <ion-icon name="time-outline"></ion-icon>
 
-                    <time datetime="PT70M">70 min</time>
+                    <time datetime="PT70M">2hr 70 min</time>
                   </div>
 
                   <div class="rating">
                     <ion-icon name="star"></ion-icon>
 
-                    <data>8.3</data>
+                    <data>7.3</data>
                   </div>
                 </div>
 
@@ -427,33 +413,6 @@
 
         <div class="footer-brand-wrapper">
 
-          <a href="./index.html" class="logo">
-            <img src="./readme-images/project-logo.png" alt="PG Movie logo">
-          </a>
-
-          <ul class="footer-list">
-
-            <li>
-              <a href="./index.html" class="footer-link">Home</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Movie</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">TV Show</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Web Series</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Pricing</a>
-            </li>
-
-          </ul>
 
         </div>
 
@@ -489,24 +448,6 @@
               </a>
             </li>
 
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-pinterest"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
           </ul>
 
         </div>
@@ -518,10 +459,10 @@
       <div class="container">
 
         <p class="copyright">
-          &copy; 2024 <a href="#">PG Movie</a>. All Rights Reserved
+          &copy; 2024 <a href="#">PG_Movie ♥ </a>.  All Rights Reserved
         </p>
 
-        <img src="./assets/images/footer-bottom-img.png" alt="Online banking companies logo" class="footer-bottom-img">
+        <img src="./static/readme-images/project-logo.png" alt="" class="footer-bottom-img">
 
       </div>
     </div>
@@ -547,7 +488,7 @@
   <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+  <script src="./static/js/script.js"></script>
 
   <!-- 
     - ionicon link

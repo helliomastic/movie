@@ -828,6 +828,11 @@ body.active { overflow: hidden; }
   width: max-content;
   margin-inline: auto;
   margin-bottom: 60px;
+  display: none;
+}
+
+.navbar-top .logo {
+  display: none;
 }
 
 .footer-list,
@@ -1367,7 +1372,7 @@ body.active { overflow: hidden; }
     all: unset;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
   }
 
   .navbar-link {
@@ -1375,7 +1380,8 @@ body.active { overflow: hidden; }
     font-size: var(--fs-9);
     font-weight: var(--fw-700);
     text-transform: uppercase;
-    padding: 30px 15px;
+    padding: 30px 20px;
+    letter-spacing: 1px;
   }
 
   .overlay { display: none; }
